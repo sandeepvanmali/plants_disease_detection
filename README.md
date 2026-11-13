@@ -1,4 +1,4 @@
-🌿 Plant Disease Detection Using Machine Learning
+🌿 Plant Disease Detection Using Machine Learning.
 
 A machine learning-based plant disease classification application that predicts plant diseases from uploaded leaf images.
 
