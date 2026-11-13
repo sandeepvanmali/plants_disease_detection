@@ -1,12 +1,21 @@
-🌿 Plant Disease Detection Using Machine Learning.
+🌿 Plant Disease Detection Using Machine Learning
 
-A machine learning-based plant disease classification application that predicts plant diseases from uploaded leaf images.
+A machine learning application that identifies plant diseases from leaf images using deep learning-based feature extraction and a Random Forest classifier.
 
 🚀 Project Overview
 
-This project uses a deep learning feature extractor combined with a Random Forest classifier to identify plant diseases from leaf images.
+This project combines MobileNetV2 and Random Forest to classify plant leaf images into different disease and healthy categories.
 
-Users can upload an image through a Streamlit web interface and receive a predicted class along with the top 5 prediction probabilities.
+The application provides a simple Streamlit interface where users can upload an image and receive a predicted class with the top 5 prediction probabilities.
+
+✨ Features
+
+* Plant disease classification across 53 classes.
+* MobileNetV2-based image feature extraction.
+* Random Forest classification.
+* Top 5 prediction probabilities.
+* Interactive Streamlit web interface.
+* Image upload support (JPG, JPEG, PNG).
 
 🛠️ Technologies Used
 
@@ -14,34 +23,46 @@ Users can upload an image through a Streamlit web interface and receive a predic
 * TensorFlow / Keras
 * MobileNetV2
 * Scikit-learn
-* Random Forest Classifier
+* Random Forest
 * Streamlit
 * NumPy
 * OpenCV
+* Joblib
 
-⚙️ Project Workflow
+⚙️ Model Workflow
 
 1. Upload a plant leaf image.
 2. Resize the image to 224 × 224 pixels.
 3. Preprocess the image using MobileNetV2 preprocessing.
-4. Extract image features using the trained feature extractor.
-5. Classify the extracted features using the Random Forest model.
+4. Extract image features using the trained MobileNetV2 model.
+5. Classify the extracted features using Random Forest.
 6. Display the predicted class and top 5 predictions.
+
+📊 Model Performance
+
+Metric	Result
+Test Accuracy	86%
+Number of Classes	53
+Test Samples	7,651
+Classifier	Random Forest
+Feature Extractor	MobileNetV2
+
+Results are from the evaluation recorded in the training notebook.
 
 📁 Project Structure
 
 plants_disease_detection/
-│
 ├── app.py
 ├── train_knn.ipynb
 ├── feature_extractor_model.h5
 ├── feature_extractor_model.keras
 ├── rf_model.pkl
 ├── class_labels.npy
+├── rf_confusion_matrix.png
 ├── requirements.txt
 └── README.md
 
-💻 Installation and Usage
+💻 Installation and Setup
 
 1. Clone the repository
 
@@ -72,13 +93,9 @@ streamlit run app.py
 
 Open the local URL displayed in your terminal.
 
-📊 Prediction Output
+📷 Application Output
 
-The application displays:
-
-* Uploaded leaf image
-* Predicted disease class
-* Top 5 prediction probabilities
+Upload a plant leaf image to view the predicted class and its top 5 prediction probabilities.
 
 👨‍💻 Author
 
